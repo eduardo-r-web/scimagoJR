@@ -1,0 +1,27 @@
+<form fxLayout="column" fxFlex="95%" fxFlex.gt-xs="50%" fxFlex.gt-sm="40%" fxFlex.gt-md="30%" class="form"
+  [formGroup]="form" (ngSubmit)="forgotPassword($event)">
+  <h1 class="mb form-title">Recuperar contraseña</h1>
+  <div *ngIf="showAlert" 
+        class="mb"
+        [ngClass]="{
+                    'alert--danger': messageError, 
+                    'alert--success': !messageError
+                }">
+    {{alertMessage}}
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Correo</mat-label>
+    <input type="text" matInput placeholder="example@example.com" formControlName="email">
+  </mat-form-field>
+  <div fxLayoutAlign="center" class="form__btngroup">
+    <button mat-raised-button class="form__btn" type="submit">
+      <mat-icon>mail</mat-icon> Enviar
+    </button>
+  </div>
+
+  <hr class="line">
+
+  <div fxLayoutAlign="center">
+    <a class="form__link" routerLink="/login" routerLinkActive="active">Ir al login</a>
+  </div>
+</form>

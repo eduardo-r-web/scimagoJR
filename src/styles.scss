@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #f3f3f3;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+/* $colors */
+
+$color-primary: #212121;
+$color-primary-light: #484848;
+$color-primary-dark: #000000;
+$color-secondary: #e91e63;
+$color-secondary-light: #ff6090;
+$color-secondary-dark: #b0003a;
+$color-white: #ffffff;
+$color-dark: #000000;
+
+
+$border-radius: .3em;
+$shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+/* color alerts */
+
+$color-warning: rgb(252,228,207);
+$color-danger: rgb(242 222 222);
+$color-info: rgb(66, 184, 221);
+$color-success: rgb(212 237 218);
+
+$color-letter-danger: rgb(191 104 99);
+$color-letter-success: rgb(111 155 133);
+/* alerts */
+
+.alert{
+    width: 90%;
+    padding: .5em;
+    margin: 0 auto;
+}
+
+.alert--danger{
+    @extend .alert;
+    background-color: $color-danger;
+    color: $color-letter-danger;
+}
+
+.alert--success{
+    @extend .alert;
+    background-color: $color-success;
+    color: $color-letter-success;
+}
