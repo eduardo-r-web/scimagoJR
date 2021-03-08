@@ -44,3 +44,11 @@ span{
 .mat-column-action{
   width: 18%;
 }
+
+::ng-deep .mat-form-field-label { // modifica el color del label del input y placeholder
+  color: $color-secondary-light !important;
+}
+
+::ng-deep .mat-input-element { // modifica el color del texto escrito en el input
+  color: $color-primary !important;
+}

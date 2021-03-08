@@ -14,6 +14,7 @@ import { CompaniesCreateComponent } from './companies/companies-create/companies
 import { CompaniesReadComponent } from './companies/companies-read/companies-read.component';
 import { CompaniesUpdateComponent } from './companies/companies-update/companies-update.component';
 import { CompaniesHistoryComponent } from './companies/companies-history/companies-history.component';
+import { CompanyDetailComponent } from './companies/company-detail/company-detail.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CompaniesHistoryComponent } from './companies/companies-history/compani
     CompaniesCreateComponent,
     CompaniesReadComponent,
     CompaniesUpdateComponent,
-    CompaniesHistoryComponent
+    CompaniesHistoryComponent,
+    CompanyDetailComponent
   ],
   imports: [
     CommonModule,

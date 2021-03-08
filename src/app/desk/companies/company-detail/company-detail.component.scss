@@ -1,0 +1,9 @@
+.mt{
+    margin-top: 1em;
+}
+
+::ng-deep .mat-progress-spinner svg, .mat-spinner {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 auto;
+}

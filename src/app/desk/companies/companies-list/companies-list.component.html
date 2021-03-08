@@ -15,19 +15,19 @@
     <!-- Name Company Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Nombre empresa </th>
-      <td mat-cell *matCellDef="let company"> {{company.name}} </td>
+      <td mat-cell *matCellDef="let company"> {{company.attributes.name}} </td>
     </ng-container>
   
     <!-- email Column -->
     <ng-container matColumnDef="email">
       <th mat-header-cell *matHeaderCellDef> Correo electrónico </th>
-      <td mat-cell *matCellDef="let company"> {{company.email}} </td>
+      <td mat-cell *matCellDef="let company"> {{company.attributes.email}} </td>
     </ng-container>
   
     <!-- phone Column -->
     <ng-container matColumnDef="phone">
       <th mat-header-cell *matHeaderCellDef> Teléfono </th>
-      <td mat-cell *matCellDef="let company"> {{company.phone}} </td>
+      <td mat-cell *matCellDef="let company"> {{company.attributes.phone}} </td>
     </ng-container>
   
     <!-- action Column -->
@@ -36,7 +36,7 @@
       <td mat-cell *matCellDef="let company">
         <div fxLayout="row wrap" fxLayoutAlign="center">
           <div>
-            <button mat-mini-fab aria-label="ver detalle" class="icon-fab">
+            <button mat-mini-fab aria-label="ver detalle" [routerLink]="[company.id]" class="icon-fab">
               <mat-icon>preview</mat-icon>
             </button>
           </div>

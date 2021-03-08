@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Company, DataCompany } from 'src/app/core/interfaces/companies-list-response.interface';
 import { CompaniesService } from 'src/app/core/services/companies/companies.service';
 import {MatTableDataSource} from '@angular/material/table';
+import { Company } from 'src/app/core/interfaces/company.interface';
 
 @Component({
   selector: 'app-companies-list',
@@ -10,8 +10,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class CompaniesListComponent implements OnInit {
 
-  companies: DataCompany[] = [];
-  company: Company[] = [];
+  companies: Company[] = [];
   displayedColumns = ['name', 'email', 'phone', 'action'];
   dataSource: MatTableDataSource<Company>;
 
@@ -31,8 +30,7 @@ export class CompaniesListComponent implements OnInit {
   }
 
   loadTable(){
-    this.companies.forEach( companies => this.company.push(companies.attributes));
-    this.dataSource = new MatTableDataSource(this.company);
+    this.dataSource = new MatTableDataSource(this.companies);
   }
 
 }

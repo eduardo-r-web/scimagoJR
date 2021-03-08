@@ -8,6 +8,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [],
@@ -20,7 +22,9 @@ import { MatTableModule } from '@angular/material/table';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatInputModule,
@@ -30,7 +34,9 @@ import { MatTableModule } from '@angular/material/table';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule,
+    MatProgressSpinnerModule
   ]
 })
 export class MaterialModule { }
