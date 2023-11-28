@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { DeskModule } from './desk/desk.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DeskModule
+    DeskModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
