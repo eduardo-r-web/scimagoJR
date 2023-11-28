@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Caudalapp": {
+    "scimagoapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Caudalapp",
+            "outputPath": "dist/scimagoapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Caudalapp:build"
+            "browserTarget": "scimagoapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Caudalapp:build:production"
+              "browserTarget": "scimagoapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Caudalapp:build"
+            "browserTarget": "scimagoapp:build"
           }
         },
         "test": {
@@ -115,16 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Caudalapp:serve"
+            "devServerTarget": "scimagoapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Caudalapp:serve:production"
+              "devServerTarget": "scimagoapp:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Caudalapp"
+  "defaultProject": "scimagoapp"
 }

@@ -6,27 +6,10 @@
 
 .sidenav {
   width: 200px;
-  background-color: $color-primary;
-}
-
-.sidenav .mat-toolbar {
-  background: inherit;
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
-}
-
-.link{
-  color: $color-secondary;
-}
-
-.navbar{
-  background-color: $color-primary !important;
-  color: $color-secondary;
-}
-.mat-drawer-container{
-  background-color: #ececec;
 }

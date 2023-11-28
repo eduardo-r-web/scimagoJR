@@ -3,22 +3,16 @@ import { Injectable } from '@angular/core';
 import { Observable, pipe } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { CompaniesCreateResponse } from '../../interfaces/companies-create-response.interface';
-import { CompaniesListResponse } from '../../interfaces/companies-list-response.interface';
-import { CompaniesReadResponse } from '../../interfaces/companies-read-response';
-import { Company, CompanyAttributes } from '../../interfaces/company.interface';
-import { AuthService } from '../auth/auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompaniesService {
 
-  constructor( private http: HttpClient,
-               private authServices: AuthService
+  constructor( private http: HttpClient
                 ) {}
 
-  companiesList(): Observable<Company[]>{
+  /* companiesList(): Observable<Company[]>{
     const headers = new HttpHeaders({
       Authorization: `${this.authServices.tokenInfo.token_type} ${this.authServices.tokenInfo.access_token}`
     });
@@ -55,5 +49,5 @@ export class CompaniesService {
         }
     };
     return this.http.post<CompaniesCreateResponse>(`${environment.API_URL}/companies/`, authData, {headers});
-  }
+  } */
 }

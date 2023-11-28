@@ -5,35 +5,30 @@ import { DeskRoutingModule } from './desk-routing.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MaterialModule } from '../material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // components
 import { DeskComponent } from './desk.component';
 import { HomeComponent } from './home/home.component';
-import { CompaniesListComponent } from './companies/companies-list/companies-list.component';
-import { CompaniesCreateComponent } from './companies/companies-create/companies-create.component';
-import { CompaniesReadComponent } from './companies/companies-read/companies-read.component';
-import { CompaniesUpdateComponent } from './companies/companies-update/companies-update.component';
-import { CompaniesHistoryComponent } from './companies/companies-history/companies-history.component';
-import { CompanyDetailComponent } from './companies/company-detail/company-detail.component';
+import { PredictComponent } from './predict/predict/predict.component';
+import { PredictViewComponent } from './predict/predict-view/predict-view.component';
+
 
 
 @NgModule({
   declarations: [
     DeskComponent,
     HomeComponent,
-    CompaniesListComponent,
-    CompaniesCreateComponent,
-    CompaniesReadComponent,
-    CompaniesUpdateComponent,
-    CompaniesHistoryComponent,
-    CompanyDetailComponent
+    PredictComponent,
+    PredictViewComponent
   ],
   imports: [
     CommonModule,
     DeskRoutingModule,
     LayoutModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
   exports: [
     DeskComponent,

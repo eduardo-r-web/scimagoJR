@@ -1,0 +1,39 @@
+<div style="display: flex; justify-content: center; margin-top: 3em;">
+    <mat-card style="width: 40%;">
+        <mat-card-header>
+            <mat-card-title>Predicción</mat-card-title>
+            <mat-card-subtitle>Se encarga de predecir el ranking de determinada revista</mat-card-subtitle>
+          </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="form" (ngSubmit)="save( $event )">
+                <div style="display: flex; justify-content: space-between;">
+                    <mat-form-field appearance="outline" style="width: 49%;">
+                        <mat-label>Documentos</mat-label>
+                        <input matInput type="number" min="0" placeholder="Total de docs" formControlName="total_docs">
+                        <mat-error *ngIf="form.get('total_docs').hasError('required')">Campo requerido</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" style="width: 49%;">
+                        <mat-label>Ciudades</mat-label>
+                        <input matInput type="number" min="0" placeholder="Número de ciudades" formControlName="new_cities">
+                        <mat-error *ngIf="form.get('new_cities').hasError('required')">Campo requerido</mat-error>
+                    </mat-form-field>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <mat-form-field appearance="outline" style="width: 49%;">
+                        <mat-label>Cuartil</mat-label>
+                        <input matInput type="number" min="0" placeholder="Mejor cuartil" formControlName="best_quartile">
+                        <mat-error *ngIf="form.get('best_quartile').hasError('required')">Campo requerido</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" style="width: 49%;">
+                        <mat-label>Referencias</mat-label>
+                        <input matInput type="number" min="0" placeholder="Total de referencias" formControlName="total_refs">
+                        <mat-error *ngIf="form.get('total_refs').hasError('required')">Campo requerido</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-flat-button type="submit" color="primary" (click)="openDialog()">Predecir</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>

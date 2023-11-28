@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { AuthService } from '../core/services/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,17 +18,7 @@ export class DeskComponent {
     );
 
   constructor( private breakpointObserver: BreakpointObserver,
-               private authService: AuthService,
                private router: Router) { }
 
-  logout(): void {
-    this.authService.logout()
-      .subscribe( resp => {
-        this.authService.removeStorage();
-        this.router.navigateByUrl('/login');
-      }, error => {
-        console.log(error);
-      });
-  }
 
 }
