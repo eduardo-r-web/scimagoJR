@@ -1,8 +1,9 @@
+<h2>Conexión a API</h2>
 <form [formGroup]="form" (ngSubmit)="save( $event )">
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" style="width: 70vw;">
         <mat-label>URL de la API</mat-label>
         <input matInput type="text" placeholder="Url API" formControlName="api_url">
-        <mat-error *ngIf="form.get('api_url').hasError('required')">Campo requerido</mat-error>
+        <mat-error *ngIf="form.get('api_url').hasError('pattern')">No es una URL valida</mat-error>
     </mat-form-field>
     <div mat-dialog-actions>
         <button mat-button mat-dialog-close>Close</button>

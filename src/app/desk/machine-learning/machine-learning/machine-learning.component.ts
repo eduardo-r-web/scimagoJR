@@ -13,10 +13,6 @@ export class MachineLearningComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.machineLearningModelService.getHello().subscribe( data => {
-      console.log(data);
-      
-    })
   }
 
 }

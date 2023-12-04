@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { MachineLearningModelService } from 'src/app/core/services/machine-learning-model/machine-learning-model.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class ApiDialogComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private machineLearningModelService: MachineLearningModelService
+    private machineLearningModelService: MachineLearningModelService,
+    private dialogRef: MatDialogRef<ApiDialogComponent>
   ) { }
 
   ngOnInit(): void {
@@ -22,14 +24,14 @@ export class ApiDialogComponent implements OnInit {
 
   buildForm(): void{
     this.form = this.formBuilder.group({
-      api_url: ['', [ Validators.required ]]
+      api_url: ['', [ Validators.pattern(/(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/) ]]
     });
   }
 
   save( event: Event){
     if(this.form.valid){
-      console.log(this.form.get('api_url').value);
       this.machineLearningModelService.updateUrl(this.form.get('api_url').value);
+      this.dialogRef.close();
     }
   }
 }

@@ -25,7 +25,7 @@ export class DeskComponent {
     ) { }
 
     openDialog(): void {
-      const dialogRef = this.dialog.open(ApiDialogComponent);
+      const dialogRef = this.dialog.open(ApiDialogComponent, {disableClose: true});
     }
 
 }
