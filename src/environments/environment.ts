@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL: 'https://api-itm.commity.co',
-  CLIENT_ID: 'R1sE8C0NkTuRcgXETmx173VNonp1HC9NzpQYpqbG'
+  API_URL: 'https://cf91-2800-e2-5880-369-978-2743-e21f-429.ngrok.io'
 };
 
 /*

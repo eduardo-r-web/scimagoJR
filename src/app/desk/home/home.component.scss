@@ -1,8 +1,37 @@
+.card{
+    margin: 1rem;
+}
+
 .table-container {
-    width: 90%;
+    width: 100%;
     margin: 3em auto;
+    overflow: auto;
 }
 
 table{
     width: 100%;
+}
+
+.image{
+    min-width: 100%;
+    width: 100%;
+}
+
+.box-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box{
+    margin-top: 2rem;
+    width: 11%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span{
+        margin-top: 1rem;
+        text-align: center;
+    }
 }

@@ -12,6 +12,9 @@ import { DeskComponent } from './desk.component';
 import { HomeComponent } from './home/home.component';
 import { PredictComponent } from './predict/predict/predict.component';
 import { PredictViewComponent } from './predict/predict-view/predict-view.component';
+import { MachineLearningComponent } from './machine-learning/machine-learning/machine-learning.component';
+import { ClassifierComponent } from './classifier/classifier/classifier.component';
+import { ClassifierViewComponent } from './classifier/classifier-view/classifier-view.component';
 
 
 
@@ -20,7 +23,10 @@ import { PredictViewComponent } from './predict/predict-view/predict-view.compon
     DeskComponent,
     HomeComponent,
     PredictComponent,
-    PredictViewComponent
+    PredictViewComponent,
+    MachineLearningComponent,
+    ClassifierComponent,
+    ClassifierViewComponent
   ],
   imports: [
     CommonModule,

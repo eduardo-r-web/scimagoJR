@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { PredictViewComponent } from '../predict-view/predict-view.component';
+import { ClassifierViewComponent } from '../classifier-view/classifier-view.component';
 
 @Component({
-  selector: 'app-predict',
-  templateUrl: './predict.component.html',
-  styleUrls: ['./predict.component.scss']
+  selector: 'app-classifier',
+  templateUrl: './classifier.component.html',
+  styleUrls: ['./classifier.component.scss']
 })
-export class PredictComponent implements OnInit {
+export class ClassifierComponent implements OnInit {
 
   form: FormGroup;
 
@@ -25,7 +25,6 @@ export class PredictComponent implements OnInit {
   buildForm(): void{
     this.form = this.formBuilder.group({
       total_docs: ['', [ Validators.required ]],
-      sjr: ['', [ Validators.required ]],
       new_cites: ['', [ Validators.required ]],
       best_quartile: ['', [ Validators.required ]],
       total_refs: ['', [ Validators.required ]]
@@ -34,10 +33,9 @@ export class PredictComponent implements OnInit {
 
   openDialog() {
     if(this.form.valid){
-      this.dialog.open(PredictViewComponent, {
+      this.dialog.open(ClassifierViewComponent, {
         data: {
           total_docs: this.form.get('total_docs').value,
-          sjr: this.form.get('sjr').value,
           new_cites: this.form.get('new_cites').value,
           best_quartile: this.form.get('best_quartile').value,
           total_refs: this.form.get('total_refs').value
@@ -51,4 +49,5 @@ export class PredictComponent implements OnInit {
   save( event: Event){
 
   }
+
 }

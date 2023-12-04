@@ -1,26 +1,21 @@
 <div style="display: flex; justify-content: center;">
     <mat-card style="margin: 1em; width: 100%;">
         <mat-card-header>
-            <mat-card-title>Predicción de Rankings mediante Factores Clave</mat-card-title>
-            <mat-card-subtitle>Su función principal consiste en anticipar el posicionamiento que alcanzará una revista, considerando los parámetros más relevantes en el momento de clasificarla.</mat-card-subtitle>
+            <mat-card-title>Estimación de Clasificación </mat-card-title>
+            <mat-card-subtitle> nuestro modelo predice la clasificación futura de tu revista en Scimago.</mat-card-subtitle>
           </mat-card-header>
         <mat-card-content class="container-form">
             <form [formGroup]="form" (ngSubmit)="save( $event )">
                 <div style="display: flex; justify-content: space-between;">
-                    <mat-form-field appearance="outline" style="width: 33%;">
+                    <mat-form-field appearance="outline" style="width: 49%;">
                         <mat-label>Documentos</mat-label>
                         <input matInput type="number" min="0" placeholder="Total de docs" formControlName="total_docs">
                         <mat-error *ngIf="form.get('total_docs').hasError('required')">Campo requerido</mat-error>
                     </mat-form-field>
-                    <mat-form-field appearance="outline" style="width: 33%;">
+                    <mat-form-field appearance="outline" style="width: 49%;">
                         <mat-label>Citas</mat-label>
                         <input matInput type="number" min="0" placeholder="Número de citas" formControlName="new_cites">
                         <mat-error *ngIf="form.get('new_cites').hasError('required')">Campo requerido</mat-error>
-                    </mat-form-field>
-                    <mat-form-field appearance="outline" style="width: 33%;">
-                        <mat-label>Sjr</mat-label>
-                        <input matInput type="number" min="0" placeholder="Número de sjr" formControlName="sjr">
-                        <mat-error *ngIf="form.get('sjr').hasError('required')">Campo requerido</mat-error>
                     </mat-form-field>
                 </div>
                 <div style="display: flex; justify-content: space-between;">
@@ -36,7 +31,7 @@
                     </mat-form-field>
                 </div>
                 <div>
-                    <button mat-flat-button type="submit" color="primary" (click)="openDialog()">Predecir</button>
+                    <button mat-flat-button type="submit" color="primary" (click)="openDialog()">Clasificar</button>
                 </div>
             </form>
         </mat-card-content>
