@@ -1,25 +1,28 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, pipe } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 import { Predict } from '../../interfaces/predict.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MachineLearningModelService {
-
+  private api_url: string ="";
 
   constructor( private httpClient: HttpClient) { }
 
+  updateUrl( url: string ){
+    this.api_url = url;
+  }
+
   getHello(){
-    return this.httpClient.get(`${environment.API_URL}/`);
+    return this.httpClient.get(`${this.api_url}/`);
   }
   predict( dataPrediction: Predict ): Observable<any>{
-    return this.httpClient.post(`${environment.API_URL}/predict`, dataPrediction);
+    return this.httpClient.post(`${this.api_url}/predict`, dataPrediction);
   }
 
   classifier( dataClassifier: any ): Observable<any>{
-    return this.httpClient.post(`${environment.API_URL}/classifier`, dataClassifier);
+    return this.httpClient.post(`${this.api_url}/classifier`, dataClassifier);
   }
 }

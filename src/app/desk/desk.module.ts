@@ -15,6 +15,7 @@ import { PredictViewComponent } from './predict/predict-view/predict-view.compon
 import { MachineLearningComponent } from './machine-learning/machine-learning/machine-learning.component';
 import { ClassifierComponent } from './classifier/classifier/classifier.component';
 import { ClassifierViewComponent } from './classifier/classifier-view/classifier-view.component';
+import { ApiDialogComponent } from './api-dialog/api-dialog/api-dialog.component';
 
 
 
@@ -26,7 +27,8 @@ import { ClassifierViewComponent } from './classifier/classifier-view/classifier
     PredictViewComponent,
     MachineLearningComponent,
     ClassifierComponent,
-    ClassifierViewComponent
+    ClassifierViewComponent,
+    ApiDialogComponent
   ],
   imports: [
     CommonModule,
