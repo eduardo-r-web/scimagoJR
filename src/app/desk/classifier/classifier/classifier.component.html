@@ -6,6 +6,11 @@
           </mat-card-header>
         <mat-card-content class="container-form">
             <form [formGroup]="form" (ngSubmit)="save( $event )">
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Titulo</mat-label>
+                    <input matInput type="text" placeholder="Titulo de la revista" formControlName="title">
+                    <mat-error *ngIf="form.get('title').hasError('required')">Campo requerido</mat-error>
+                </mat-form-field>
                 <div style="display: flex; justify-content: space-between;">
                     <mat-form-field appearance="outline" style="width: 49%;">
                         <mat-label>Documentos</mat-label>

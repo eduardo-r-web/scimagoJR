@@ -24,6 +24,7 @@ export class ClassifierComponent implements OnInit {
 
   buildForm(): void{
     this.form = this.formBuilder.group({
+      title: ['', [ Validators.required ]],
       total_docs: ['', [ Validators.required ]],
       new_cites: ['', [ Validators.required ]],
       best_quartile: ['', [ Validators.required ]],
@@ -35,6 +36,7 @@ export class ClassifierComponent implements OnInit {
     if(this.form.valid){
       this.dialog.open(ClassifierViewComponent, {
         data: {
+          title: this.form.get('title').value,
           total_docs: this.form.get('total_docs').value,
           new_cites: this.form.get('new_cites').value,
           best_quartile: this.form.get('best_quartile').value,

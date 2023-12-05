@@ -8,7 +8,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "create": "ng g c desk/api-dialog/api-dialog",
-    "build": "ng build"
+    "ghpages": "ng add angular-cli-ghpages",
+    "build": "ng deploy --base-href=https://eduardo-r-web.github.io/scimago/"
   },
   "private": true,
   "dependencies": {

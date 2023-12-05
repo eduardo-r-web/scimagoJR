@@ -24,6 +24,7 @@ export class PredictComponent implements OnInit {
 
   buildForm(): void{
     this.form = this.formBuilder.group({
+      title: ['', [ Validators.required ]],
       total_docs: ['', [ Validators.required ]],
       sjr: ['', [ Validators.required ]],
       new_cites: ['', [ Validators.required ]],
@@ -36,6 +37,7 @@ export class PredictComponent implements OnInit {
     if(this.form.valid){
       this.dialog.open(PredictViewComponent, {
         data: {
+          title: this.form.get('title').value,
           total_docs: this.form.get('total_docs').value,
           sjr: this.form.get('sjr').value,
           new_cites: this.form.get('new_cites').value,
